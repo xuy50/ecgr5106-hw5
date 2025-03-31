@@ -302,9 +302,9 @@ All models are trained and evaluated on the full parallel dataset. Metrics inclu
 
 - **RNN Models:** Both the vanilla and attention-based RNNs reach 100% token-level accuracy, although they may scale less efficiently.
 - **Transformer Models:**  
-  Shallow Transformer configurations (1 or 2 layers) with 4 heads converge quickly and produce high accuracy, while the deep (4-layer) configurations fail to converge on this small dataset.
-- Although the assignment suggested eight Transformer combinations, our experiments focused on the six primary configurations (with sequence length = 20). Supplementary tests with longer sequences were performed but are not part of the core analysis.
-- Overall, for English-to-French translation on a small dataset, shallow Transformer models (1 or 2 layers with 4 heads) can match or even exceed the performance of RNN-based models with faster training times.
+  Shallow Transformer configurations (1 or 2 layers) with 2 and 4 heads converge quickly and produce high accuracy, while the deep (4-layer) configurations fail to converge on this small dataset.
+- Experiments focused on the six primary configurations (with sequence length = 20). Supplementary tests with longer sequences were performed but are not part of the core analysis.
+- Overall, for English-to-French translation on a small dataset, shallow Transformer models (1 or 2 layers with 2 and 4 heads) can match or even exceed the performance of RNN-based models with faster training times.
 
 ---
 
@@ -401,8 +401,8 @@ Similar to Problem 3, experiments primarily focus on six Transformer configurati
 
 - **RNN Models:** Both vanilla and attention-based RNNs reach near-perfect token-level accuracy, though they tend to have slower training speeds and less scalability.
 - **Transformer Models:**  
-  Shallow configurations (1 or 2 layers) with 4 heads perform well, while 4-layer models fail to converge on this small dataset.
-- Although the assignment initially mentioned eight combinations, our core experiments focused on the six primary Transformer configurations (with a fixed sequence length of 20). Supplementary tests with longer sequences were also conducted but are not part of the main analysis.
+  Shallow configurations (1 or 2 layers) with 2 and 4 heads perform well, while 4-layer models fail to converge on this small dataset.
+- The core experiments focused on the six primary Transformer configurations (with a fixed sequence length of 20). Supplementary tests with longer sequences were also conducted but are not part of the main analysis.
 - Overall, for French-to-English translation, shallow Transformer models achieve high performance with faster training times, while RNN-based models maintain consistent accuracy but with slower training speeds.
 
 ---
@@ -416,7 +416,7 @@ Similar to Problem 3, experiments primarily focus on six Transformer configurati
   While Transformers offer greater flexibility and potential scalability, they require more data or further tuning to excel on smaller datasets.
   
 - **Hyperparameter Sensitivity:**  
-  The performance of Transformer models is very sensitive to the number of layers and attention heads. Shallow configurations (1–2 layers) with 4 heads tend to offer the best trade-off between performance and training time.
+  The performance of Transformer models is very sensitive to the number of layers and attention heads. Shallow configurations (1–2 layers) with 2 and 4 heads tend to offer the best trade-off between performance and training time.
   
 - **Sequence Length:**  
   Increasing the input sequence length does not always lead to improved performance; optimal lengths depend on the task and dataset size.
